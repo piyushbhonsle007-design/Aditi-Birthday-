@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Aditi ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    font-family: 'Segoe UI', sans-serif;
+    text-align:center;
+    color:white;
+}
+
+.container{
+    margin-top:120px;
+}
+
+h1{
+    font-size:55px;
+}
+
+p{
+    font-size:22px;
+    width:70%;
+    margin:auto;
+    margin-top:20px;
+}
+
+button{
+    margin-top:40px;
+    padding:15px 35px;
+    font-size:20px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4b7d;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ffe6ec;
+}
+
+#message{
+    display:none;
+    margin-top:40px;
+    font-size:24px;
+}
+
+.heart{
+    font-size:40px;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Happy Birthday Aditi 🎂</h1>
+
+<p>
+To the most beautiful girl in my life.
+You are my happiness, my smile and my favorite person.
+I’m so lucky to have you. ❤️
+</p>
+
+<button onclick="showMessage()">Click for Surprise 🎁</button>
+
+<div id="message">
+<p>
+Aditi ❤️<br><br>
+On your special day I just want to say...
+You are the best thing that ever happened to me.
+I promise to always make you smile.
+<br><br>
+I Love You So Much 💖
+</p>
+
+<div class="heart">❤️</div>
+
+</div>
+
+</div>
+
+<script>
+function showMessage(){
+document.getElementById("message").style.display="block";
+}
+</script>
+
+</body>
+</html>
