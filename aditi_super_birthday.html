@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Aditi ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ff4e8a,#ff7eb3);
+color:white;
+text-align:center;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+overflow:hidden;
+}
+
+h1{
+font-size:55px;
+}
+
+button{
+padding:15px 40px;
+font-size:20px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4e8a;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#ffe4ef;
+}
+
+#message{
+font-size:24px;
+margin-top:30px;
+width:80%;
+max-width:700px;
+min-height:120px;
+}
+
+.heart{
+position:fixed;
+font-size:20px;
+color:white;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid">
+</audio>
+
+<h1>Happy Birthday Aditi 🎂</h1>
+<p>Click the button for a surprise 💝</p>
+
+<button onclick="start()">Open My Heart</button>
+
+<div id="message"></div>
+
+<script>
+let text="Aditi ❤️ You are the most beautiful part of my life. Every moment with you feels magical. Thank you for being in my life. I promise to always love you and always make you smile. Happy Birthday My Love 💖";
+let i=0;
+
+function start(){
+type();
+confetti();
+}
+
+function type(){
+if(i < text.length){
+document.getElementById("message").innerHTML += text.charAt(i);
+i++;
+setTimeout(type,40);
+}
+}
+
+function heart(){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=Math.random()*20+10+"px";
+document.body.appendChild(heart);
+setTimeout(()=>{heart.remove()},6000)
+}
+
+setInterval(heart,300)
+
+function confetti(){
+for(let i=0;i<120;i++){
+let conf=document.createElement("div");
+conf.style.position="absolute";
+conf.style.width="8px";
+conf.style.height="8px";
+conf.style.background="white";
+conf.style.top=Math.random()*100+"vh";
+conf.style.left=Math.random()*100+"vw";
+document.body.appendChild(conf);
+}
+}
+</script>
+
+</body>
+</html>
